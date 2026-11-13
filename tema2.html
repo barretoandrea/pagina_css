@@ -1,0 +1,462 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tipos de incorporación CSS</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-lg navbar-dark menu-principal">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                Temas de CSS
+            </a>
+
+            <a href="index.html" class="btn boton-volver">
+                Volver al inicio
+            </a>
+
+        </div>
+    </nav>
+
+
+    <main class="container my-4">
+
+
+        <!-- ENCABEZADO -->
+        <section class="portada-tema tema-rosa mb-4">
+
+            <span class="badge etiqueta-detalle">TEMA 02.2</span>
+
+            <h1>Tipos de incorporación CSS</h1>
+
+            <p>
+                Existen diferentes maneras de aplicar estilos a una
+                página web. Conoce las tres formas principales
+                y aprende cómo funciona cada una.
+            </p>
+
+        </section>
+
+
+        <!-- INTRODUCCION -->
+        <section class="card detalle-card mb-4">
+
+            <div class="card-body p-4">
+
+                <h2>¿Qué significa incorporar CSS?</h2>
+
+                <p>
+                    Incorporar CSS significa agregar los estilos que
+                    necesita una página HTML para modificar su apariencia.
+                    Estos estilos pueden escribirse dentro del mismo
+                    documento HTML o en un archivo separado.
+                </p>
+
+                <p>
+                    Existen tres formas principales de hacerlo:
+                    CSS interno, CSS externo y CSS en línea.
+                    Aunque las tres permiten cambiar el diseño,
+                    su manera de escribirse y organizarse es diferente.
+                </p>
+
+                <div class="row g-3 mt-2">
+
+                    <div class="col-md-4">
+                        <div class="concepto">
+                            <h5>Interno</h5>
+                            <p>Los estilos están dentro del HTML.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="concepto">
+                            <h5>Externo</h5>
+                            <p>Los estilos están en otro archivo.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="concepto">
+                            <h5>En línea</h5>
+                            <p>Los estilos están en la etiqueta HTML.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CSS INTERNO -->
+        <section class="card detalle-card mb-4">
+
+            <div class="card-body p-4">
+
+                <span class="badge etiqueta-detalle">PRIMER TIPO</span>
+
+                <h2>1. CSS interno</h2>
+
+                <p>
+                    El CSS interno consiste en escribir los estilos
+                    directamente dentro del documento HTML.
+                    Para utilizarlo se emplea la etiqueta
+                    &lt;style&gt;, que normalmente se coloca
+                    dentro de la sección &lt;head&gt;.
+                </p>
+
+                <p>
+                    De esta manera podemos tener la estructura HTML
+                    y los estilos en un mismo archivo, sin necesidad
+                    de crear un documento CSS independiente.
+                </p>
+
+                <h4>¿Cómo se utiliza?</h4>
+
+                <div class="codigo">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+
+    &lt;title&gt;Ejemplo CSS interno&lt;/title&gt;
+
+    &lt;style&gt;
+        h1 {
+            color: purple;
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    &lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Hola, estoy aprendiendo CSS&lt;/h1&gt;
+    &lt;p&gt;Este es un ejemplo de CSS interno.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+
+                <h4>¿Qué está pasando en el código?</h4>
+
+                <p>
+                    Primero se escribe la estructura básica del HTML.
+                    Después, dentro de head, se abre la etiqueta style.
+                    Allí se escriben las reglas CSS que van a modificar
+                    los elementos de la página.
+                </p>
+
+                <ul>
+                    <li>El título h1 cambia a color morado.</li>
+                    <li>El título queda alineado en el centro.</li>
+                    <li>El párrafo utiliza un tamaño de 18 píxeles.</li>
+                </ul>
+
+                <div class="resultado">
+                    <h2>Hola, estoy aprendiendo CSS</h2>
+                    <p>Este es un ejemplo de CSS interno.</p>
+                </div>
+
+                <div class="alert nota-detalle mt-4">
+                    <strong>Ventaja:</strong> es sencillo de utilizar cuando
+                    trabajamos con una sola página y queremos tener todo
+                    el código en el mismo documento.
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CSS EXTERNO -->
+        <section class="card detalle-card mb-4">
+
+            <div class="card-body p-4">
+
+                <span class="badge etiqueta-detalle">SEGUNDO TIPO</span>
+
+                <h2>2. CSS externo</h2>
+
+                <p>
+                    El CSS externo consiste en escribir los estilos
+                    en un archivo independiente que tiene la extensión
+                    .css. Luego, este archivo se conecta con el documento
+                    HTML mediante la etiqueta link.
+                </p>
+
+                <p>
+                    Es una de las formas más utilizadas en el desarrollo
+                    web porque permite separar el contenido de los estilos.
+                    Así, el HTML queda encargado de la estructura y el CSS
+                    se encarga de la apariencia.
+                </p>
+
+                <h4>¿Cómo se organiza?</h4>
+
+                <div class="estructura-archivos">
+
+                    <div>
+                        <strong>Carpeta: mi-proyecto</strong>
+                    </div>
+
+                    <div class="archivo">
+                        index.html
+                    </div>
+
+                    <div class="archivo">
+                        styles.css
+                    </div>
+
+                </div>
+
+                <h4>Código HTML</h4>
+
+                <p>
+                    En el documento HTML se utiliza la etiqueta link
+                    dentro de head para conectar el archivo CSS.
+                </p>
+
+                <div class="codigo">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+
+    &lt;title&gt;Ejemplo CSS externo&lt;/title&gt;
+
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Mi primera página&lt;/h1&gt;
+    &lt;p&gt;Estoy utilizando CSS externo.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+
+                <h4>Código del archivo styles.css</h4>
+
+                <p>
+                    En este segundo archivo se escriben las propiedades
+                    y los valores que queremos aplicar.
+                </p>
+
+                <div class="codigo">
+<pre><code>h1 {
+    color: purple;
+    text-align: center;
+}
+
+p {
+    color: gray;
+    font-size: 18px;
+}</code></pre>
+                </div>
+
+                <h4>¿Qué está pasando?</h4>
+
+                <p>
+                    El archivo HTML está conectado con styles.css.
+                    Por eso, cuando se abre la página, el navegador
+                    también lee las reglas que están escritas en el
+                    archivo externo y las aplica a los elementos.
+                </p>
+
+                <div class="resultado">
+                    <h2>Mi primera página</h2>
+                    <p>Estoy utilizando CSS externo.</p>
+                </div>
+
+                <div class="alert nota-detalle mt-4">
+                    <strong>Ventaja:</strong> permite reutilizar los mismos
+                    estilos en varias páginas y facilita el mantenimiento
+                    del proyecto.
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CSS EN LINEA -->
+        <section class="card detalle-card mb-4">
+
+            <div class="card-body p-4">
+
+                <span class="badge etiqueta-detalle">TERCER TIPO</span>
+
+                <h2>3. CSS en línea</h2>
+
+                <p>
+                    El CSS en línea se aplica directamente a una etiqueta
+                    HTML mediante el atributo style. A diferencia del CSS
+                    interno y externo, no se necesita crear un bloque
+                    de estilos aparte.
+                </p>
+
+                <p>
+                    Cada propiedad se escribe dentro del atributo style,
+                    junto con su valor. Es una forma rápida de modificar
+                    un elemento específico.
+                </p>
+
+                <h4>¿Cómo se utiliza?</h4>
+
+                <div class="codigo">
+<pre><code>&lt;h1 style="color: purple; text-align: center;"&gt;
+    Hola mundo
+&lt;/h1&gt;
+
+&lt;p style="font-size: 18px; color: gray;"&gt;
+    Este texto tiene CSS en línea.
+&lt;/p&gt;</code></pre>
+                </div>
+
+                <h4>¿Qué está pasando?</h4>
+
+                <p>
+                    En el primer ejemplo, el título tiene un color
+                    morado y está alineado al centro. En el segundo,
+                    el párrafo tiene un tamaño de 18 píxeles
+                    y un color gris.
+                </p>
+
+                <div class="resultado">
+                    <h2>Hola mundo</h2>
+                    <p>Este texto tiene CSS en línea.</p>
+                </div>
+
+                <div class="alert nota-detalle mt-4">
+                    <strong>Desventaja:</strong> si se utiliza en muchos
+                    elementos, el HTML puede volverse difícil de leer
+                    y mantener.
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- COMPARACION -->
+        <section class="card detalle-card mb-4">
+
+            <div class="card-body p-4">
+
+                <h2>Comparación de los tres tipos</h2>
+
+                <p>
+                    Aunque las tres formas permiten aplicar estilos,
+                    existen diferencias en la manera de organizar
+                    y escribir el código.
+                </p>
+
+                <div class="table-responsive">
+
+                    <table class="table tabla-tema">
+
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Dónde se escribe</th>
+                                <th>Característica</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Interno</td>
+                                <td>Dentro de style en HTML.</td>
+                                <td>Los estilos están en el mismo documento.</td>
+                            </tr>
+
+                            <tr>
+                                <td>Externo</td>
+                                <td>En un archivo .css.</td>
+                                <td>Permite reutilizar estilos.</td>
+                            </tr>
+
+                            <tr>
+                                <td>En línea</td>
+                                <td>Dentro del atributo style.</td>
+                                <td>Modifica directamente un elemento.</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="alert nota-detalle">
+                    <strong>Para tener en cuenta:</strong>
+                    el CSS externo suele ser la opción más organizada
+                    para proyectos con varias páginas. El CSS interno
+                    puede servir para documentos pequeños y el CSS
+                    en línea para cambios puntuales.
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CONCLUSION -->
+        <section class="card resumen-card mb-4">
+
+            <div class="card-body p-4">
+
+                <h3>Conclusión</h3>
+
+                <p>
+                    Los tres tipos de incorporación CSS permiten
+                    modificar la apariencia de una página web.
+                    La diferencia está en dónde se escriben los estilos
+                    y cómo se organizan. Elegir uno depende del tamaño
+                    del proyecto y de la forma en que queremos mantener
+                    nuestro código.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- NAVEGACION -->
+        <div class="d-flex justify-content-between flex-wrap gap-2 mb-5">
+
+            <a href="tema1.html" class="btn boton-lindo">
+                Tema anterior
+            </a>
+
+            <a href="index.html" class="btn boton-lindo">
+                Volver a todos los temas
+            </a>
+
+        </div>
+
+
+        <footer class="text-center py-4">
+            <p>Temas de CSS</p>
+        </footer>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

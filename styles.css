@@ -1,0 +1,676 @@
+
+/* ESTILOS GENERALES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background-color: #fffaf7;
+    font-family: Arial, sans-serif;
+    color: #51475c;
+}
+
+
+/* COLORES */
+
+:root {
+    --lila: #8068a8;
+    --lila-claro: #f1e9fa;
+    --rosa: #f7dce2;
+    --amarillo: #f9e9bd;
+    --verde: #dcefe3;
+    --azul: #dceafa;
+}
+
+
+/* MENU PRINCIPAL */
+
+.menu-principal {
+    background-color: var(--lila);
+    padding: 12px 0;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: white !important;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    color: #ffe6a6 !important;
+}
+
+
+/* PRESENTACION */
+
+.bienvenida {
+    background-color: #f1e9fa;
+    border-radius: 12px;
+    box-shadow: none;
+}
+
+.etiqueta {
+    background-color: white;
+    color: var(--lila);
+    padding: 7px 10px;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.bienvenida h1 {
+    color: #604b76;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.texto-bienvenida {
+    color: #6c6372;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 650px;
+}
+
+.boton-lindo {
+    background-color: var(--lila);
+    color: white;
+    border-radius: 6px;
+    padding: 9px 17px;
+    border: none;
+}
+
+.boton-lindo:hover {
+    background-color: #6a568d;
+    color: white;
+}
+
+
+/* CUADROS DE INFORMACION */
+
+.mini-cuadro {
+    padding: 18px;
+    border-radius: 12px;
+    min-height: 105px;
+}
+
+.mini-cuadro p {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.mini-cuadro h3 {
+    font-size: 19px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.color-lila {
+    background-color: #f1e9fa;
+    color: #79599b;
+}
+
+.color-rosa {
+    background-color: #ffe5e8;
+    color: #bd6476;
+}
+
+.color-amarillo {
+    background-color: #fae9bd;
+    color: #a57d29;
+}
+
+.color-verde {
+    background-color: #dcefe3;
+    color: #54886d;
+}
+
+.color-azul {
+    background-color: #dceafa;
+    color: #587fae;
+}
+
+
+/* TITULOS DE SECCIONES */
+
+.encabezado-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 22px;
+}
+
+.subtitulo {
+    color: #a17bb7;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.encabezado-seccion h2 {
+    color: #604b76;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+/* TARJETAS DE TEMAS */
+
+.tema-card {
+    border: 1px solid #e9dfeb;
+    border-radius: 12px;
+    box-shadow: none;
+    transition: 0.2s;
+}
+
+.tema-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tema-card .card-body {
+    padding: 23px;
+}
+
+.tema-lila {
+    background-color: #f5edfc;
+}
+
+.tema-rosa {
+    background-color: #fff0f1;
+}
+
+.tema-amarillo {
+    background-color: #fff7e3;
+}
+
+.tema-verde {
+    background-color: #edf7ee;
+}
+
+.tema-azul {
+    background-color: #edf4fd;
+}
+
+.numero {
+    display: inline-block;
+    background-color: white;
+    color: #836b9d;
+    padding: 7px 11px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.tema-card h4 {
+    color: #574668;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.tema-card p {
+    color: #817687;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.boton-tema {
+    background-color: white;
+    color: #8068a8;
+    border: 1px solid #e7dcef;
+    border-radius: 6px;
+    font-size: 12px;
+    padding: 9px 15px;
+    margin-top: 7px;
+}
+
+.boton-tema:hover {
+    background-color: #8068a8;
+    color: white;
+}
+
+
+/* TEMAS PENDIENTES */
+
+.pendiente-badge {
+    background-color: #fff0d4;
+    color: #a47a35;
+    padding: 8px 12px;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+
+/* --------------------------------
+   PAGINAS DE EXPLICACIONES
+-------------------------------- */
+
+
+/* BOTON VOLVER */
+
+.boton-volver {
+    color: white;
+    border: 1px solid #ffffff80;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.boton-volver:hover {
+    background-color: white;
+    color: #8068a8;
+}
+
+
+/* PORTADA DE CADA TEMA */
+
+.portada-tema {
+    padding: 38px;
+    border-radius: 15px;
+}
+
+.portada-tema h1 {
+    color: #59456e;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 18px 0 12px;
+}
+
+.portada-tema p {
+    color: #71647c;
+    max-width: 650px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.portada-tema.tema-lila {
+    background-color: #f1e9fa;
+}
+
+.portada-tema.tema-rosa {
+    background-color: #ffe5e8;
+}
+
+
+/* ETIQUETAS */
+
+.etiqueta-detalle {
+    background-color: #f2e9fa;
+    color: #8068a8;
+    padding: 9px 13px;
+    font-size: 11px;
+}
+
+
+/* TARJETAS DE EXPLICACION */
+
+.detalle-card {
+    border: 1px solid #eee7ed;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: none;
+}
+
+.detalle-card .card-body {
+    padding: 35px;
+}
+
+.detalle-card h2 {
+    color: #59456e;
+    font-size: 27px;
+    font-weight: bold;
+    margin: 13px 0 18px;
+}
+
+.detalle-card h4 {
+    color: #74578d;
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+.detalle-card p {
+    color: #71677a;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* CODIGO */
+
+.codigo {
+    background-color: #282338;
+    border-radius: 8px;
+    padding: 18px;
+    margin: 15px 0;
+    overflow-x: auto;
+}
+
+.codigo pre {
+    margin: 0;
+}
+
+.codigo code {
+    color: #ead7fc;
+    font-family: Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.8;
+    white-space: pre;
+}
+
+
+/* CAJAS DE CONCEPTOS */
+
+.concepto {
+    height: 100%;
+    background-color: #f5eefb;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.concepto h5 {
+    color: #74578d;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.concepto p {
+    font-size: 13px;
+    color: #71677a;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+
+/* NOTAS */
+
+.nota-detalle {
+    background-color: #f6edfa;
+    border: none;
+    border-left: 4px solid #aa8cc3;
+    border-radius: 8px;
+    color: #6e5c7b;
+    font-size: 13px;
+    padding: 17px;
+}
+
+
+/* RESULTADOS */
+
+.resultado {
+    background-color: #fff2f2;
+    border: 1px solid #f4dddd;
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 22px;
+    text-align: center;
+}
+
+.resultado h2 {
+    color: #8068a8;
+    font-size: 26px;
+}
+
+.resultado p {
+    margin-bottom: 0;
+}
+
+
+/* COMPARACION HTML Y CSS */
+
+.ejemplo-comparacion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.comparacion-html,
+.comparacion-css {
+    background-color: #f8f3fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.comparacion-html h4,
+.comparacion-css h4 {
+    color: #8068a8;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.mini-pagina {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.mini-pagina h5 {
+    font-size: 17px;
+}
+
+.mini-pagina p {
+    font-size: 13px;
+}
+
+.mini-pagina button {
+    padding: 7px 12px;
+    border: 1px solid #aaa;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.con-estilo {
+    background-color: #eee3fa;
+    border: 2px solid #c8a9df;
+}
+
+.con-estilo h5 {
+    color: #8068a8;
+    font-weight: bold;
+}
+
+.con-estilo p {
+    color: #665777;
+}
+
+.con-estilo button {
+    background-color: #8068a8;
+    color: white;
+    border: none;
+}
+
+
+/* TABLAS */
+
+.tabla-tema {
+    margin-top: 15px;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.tabla-tema thead th {
+    background-color: #f0e7f7;
+    color: #70558b;
+    padding: 13px;
+}
+
+.tabla-tema td {
+    padding: 13px;
+    color: #71677a;
+}
+
+
+/* LISTAS */
+
+.lista-ejemplo {
+    color: #71677a;
+    font-size: 14px;
+    line-height: 2;
+    padding-left: 22px;
+}
+
+.lista-ejemplo strong {
+    color: #8068a8;
+}
+
+
+/* CONCLUSION */
+
+.resumen-card {
+    background-color: #edf7ee;
+    border: none;
+    border-radius: 12px;
+}
+
+.resumen-card h3 {
+    color: #54886d;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.resumen-card p {
+    color: #66796b;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+
+/* VOLVER A LOS TEMAS */
+
+.volver {
+    background-color: #f2e9fa;
+    color: #8068a8;
+    border-radius: 6px;
+    font-size: 13px;
+    padding: 10px 17px;
+    margin-top: 15px;
+}
+
+.volver:hover {
+    background-color: #8068a8;
+    color: white;
+}
+
+
+/* PIE DE PAGINA */
+
+footer {
+    color: #927f98;
+    font-size: 13px;
+}
+
+footer p {
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+
+/* --------------------------------
+   MEDIA QUERIES
+-------------------------------- */
+
+
+/* TABLETS */
+
+@media screen and (max-width: 992px) {
+
+    .bienvenida h1 {
+        font-size: 28px;
+    }
+
+    .encabezado-seccion h2 {
+        font-size: 23px;
+    }
+
+    .detalle-card h2 {
+        font-size: 25px;
+    }
+
+    .portada-tema h1 {
+        font-size: 30px;
+    }
+
+}
+
+
+/* CELULARES */
+
+@media screen and (max-width: 576px) {
+
+    .bienvenida h1 {
+        font-size: 25px;
+    }
+
+    .texto-bienvenida {
+        font-size: 13px;
+    }
+
+    .mini-cuadro {
+        min-height: 100px;
+        padding: 14px;
+    }
+
+    .mini-cuadro h3 {
+        font-size: 16px;
+    }
+
+    .encabezado-seccion h2 {
+        font-size: 21px;
+    }
+
+    .tema-card .card-body {
+        padding: 20px;
+    }
+
+    .portada-tema {
+        padding: 23px;
+    }
+
+    .portada-tema h1 {
+        font-size: 25px;
+    }
+
+    .detalle-card .card-body {
+        padding: 22px;
+    }
+
+    .detalle-card h2 {
+        font-size: 23px;
+    }
+
+    .detalle-card h4 {
+        font-size: 17px;
+    }
+
+    .codigo code {
+        font-size: 11px;
+    }
+
+    .ejemplo-comparacion {
+        grid-template-columns: 1fr;
+    }
+
+    .boton-volver {
+        font-size: 11px;
+    }
+
+}
